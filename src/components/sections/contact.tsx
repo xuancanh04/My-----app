@@ -28,15 +28,15 @@ const ContactSection = () => {
         </h2>
       </Link>
       <div className="grid grid-cols-1 md:grid-cols-2 z-[9999]">
-        <Card className="min-w-7xl bg-white/70 dark:bg-black/70 backdrop-blur-sm rounded-xl mt-10 md:mt-20">
+        <Card className="min-w-7xl border border-slate-200/90 bg-white/90 shadow-sm backdrop-blur-sm dark:border-border dark:bg-black/70 dark:shadow-none rounded-xl mt-10 md:mt-20">
           <CardHeader>
-            <CardTitle className="text-4xl">Contact Form</CardTitle>
+            <CardTitle className="text-4xl text-foreground">Contact Form</CardTitle>
             <CardDescription>
               Please contact me directly at{" "}
               <a
                 target="_blank"
                 href={`mailto:${config.email}`}
-                className="text-gray-200 cursor-can-hover rounded-lg"
+                className="font-medium text-slate-800 underline-offset-2 hover:underline dark:text-gray-200 cursor-can-hover rounded-lg"
               >
                 {config.email.replace(/@/g, "(at)")}
               </a>{" "}

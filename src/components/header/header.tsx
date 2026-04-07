@@ -5,11 +5,11 @@ import Link from "next/link";
 import styles from "./style.module.scss";
 import { opacity, background } from "./anim";
 import Nav from "./nav";
+import { links } from "@/components/header/config";
 import { cn } from "@/lib/utils";
 import FunnyThemeToggle from "../theme/funny-theme-toggle";
 import { Button } from "../ui/button";
 import { config } from "@/data/config";
-import OnlineUsers from "../realtime/online-users";
 
 interface HeaderProps {
   loader?: boolean;
@@ -53,14 +53,26 @@ const Header = ({ loader }: HeaderProps) => {
           </Button>
         </Link>
 
-        <OnlineUsers />
+        <nav className="hidden md:flex flex-1 justify-center items-center gap-6">
+          {links.map((link) => (
+            <Link key={link.title} href={link.href} target={link.target}>
+              <Button
+                variant="link"
+                className="text-sm text-slate-700 hover:text-slate-900 dark:text-white/80 dark:hover:text-white"
+              >
+                {link.title}
+              </Button>
+            </Link>
+          ))}
+        </nav>
+
         <FunnyThemeToggle className="w-6 h-6 mr-4" />
         <Button
           variant={"ghost"}
           onClick={() => setIsActive(!isActive)}
           className={cn(
             styles.el,
-            "m-0 p-0 h-6 bg-transparent flex items-center justify-center"
+            "m-0 p-0 h-6 bg-transparent flex items-center justify-center md:hidden"
           )}
         >
           <div className="relative flex items-center">
@@ -85,7 +97,10 @@ const Header = ({ loader }: HeaderProps) => {
         variants={background}
         initial="initial"
         animate={isActive ? "open" : "closed"}
-        className={styles.background}
+        className={cn(
+          styles.background,
+          "bg-slate-200/95 opacity-[0.92] dark:bg-[hsl(240_10%_3.9%)] dark:opacity-50"
+        )}
       ></motion.div>
       <AnimatePresence mode="wait">
         {isActive && <Nav setIsActive={setIsActive} />}

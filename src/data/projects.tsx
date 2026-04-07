@@ -236,10 +236,10 @@ export type Project = {
 };
 const projects: Project[] = [
   {
-    id: "codingducks",
-    category: "Coding platform",
-    title: "Coding Ducks",
-    src: "/assets/projects-screenshots/codingducks/landing.png",
+    id: "BespokeSoft",
+    category: "Company Introduction",
+    title: "Bespoke Soft",
+    src: "/assets/projects-screenshots/BespokeSoft/landing.png",
     screenshots: ["landing.png"],
     skills: {
       frontend: [
@@ -258,79 +258,48 @@ const projects: Project[] = [
         PROJECT_SKILLS.sockerio,
       ],
     },
-    live: "https://www.codingducks.xyz/",
-    github: "https://github.com/Naresh-Khatri/Coding-Ducks",
+    live: "https://bespokesoft.asia/",
     get content() {
       return (
         <div>
           <TypographyP className="font-mono text-2xl text-center">
-            Coding ducks = LeetCode + CodePen + CSS Battles
+            Bespoke Soft = LeetCode + CodePen + CSS Battles
           </TypographyP>
           <TypographyP className="font-mono ">
-            Coding Ducks is your coding dojo — where you level up your skills,
-            battle in real-time code duels, and earn badges like a true code
-            warrior. Track your progress, flex your brain, and climb the
-            leaderboard. Ready to quack the code?
+            Bespoke Software is a technology company specializing in the development of modern software systems and web platforms. The company focuses on building scalable, high-performance solutions that deliver reliable functionality and strong user experience.
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Problems </TypographyH3>
+          <ProjectsLinks live={this.live} />
+          <TypographyH3 className="my-4 mt-8">Software Development </TypographyH3>
           <p className="font-mono mb-2">
-            Solve coding problems similar to LeetCode, enhancing your
-            problem-solving skills across various languages.
+            Design and develop web-based applications using modern architectures to handle user interaction and data processing efficiently.
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/codingducks/problems.png`,
-              `${BASE_PATH}/codingducks/problem.png`,
+              `${BASE_PATH}/BespokeSoft/problems.png`,
+              `${BASE_PATH}/BespokeSoft/problem.png`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Ducklets</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Real-time Collaboration Features</TypographyH3>
           <p className="font-mono mb-2">
-            Collaborate in real-time with others in a multiplayer coding
-            environment, just like CodePen but with a social twist.
+            Implement systems that support multiple users interacting simultaneously, improving collaboration and system interactivity.
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/codingducks/ducklets.png`,
-              `${BASE_PATH}/codingducks/ducklet1.png`,
-              `${BASE_PATH}/codingducks/ducklet2.png`,
+              `${BASE_PATH}/BespokeSoft/bespoke1.png`,
+              `${BASE_PATH}/BespokeSoft/bespoke2.png`,
+              `${BASE_PATH}/BespokeSoft/bespoke3.png`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">UI Battles </TypographyH3>
+          <TypographyH3 className="my-4 mt-8">User Interface Development </TypographyH3>
 
           <p className="font-mono mb-2">
-            Challenge yourself to create UI components with HTML/CSS/JS, and get
-            instant feedback with an automated similarity scoring.
+            Build responsive and user-friendly interfaces using modern front-end technologies, ensuring a smooth and intuitive user experience.
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/codingducks/css-battles.png`,
-              `${BASE_PATH}/codingducks/css-battle.png`,
-              `${BASE_PATH}/codingducks/css-battle2.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Contests </TypographyH3>
-          <p className="font-mono mb-2">
-            Organize or participate in coding competitions. Successfully used to
-            host three contests during college.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/codingducks/contests.png`]} />
-          <TypographyH3 className="my-4 mt-8">Playground </TypographyH3>
-          <p className="font-mono mb-2">
-            Test and execute your code instantly in my versatile online code
-            runner.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/codingducks/playground.png`]} />
-          <TypographyH3 className="my-4 mt-8">Users</TypographyH3>
-
-          <p className="font-mono mb-2">
-            Track your progress, earn badges, and climb the rankings with
-            detailed user profiles and activity tracking.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/codingducks/users.png`,
-              `${BASE_PATH}/codingducks/user.png`,
+              `${BASE_PATH}/BespokeSoft/cssbare1.png`,
+              `${BASE_PATH}/BespokeSoft/cssbare2.png`,
+              `${BASE_PATH}/BespokeSoft/cssbare3.png`,
             ]}
           />
         </div>
@@ -338,12 +307,17 @@ const projects: Project[] = [
     },
   },
   {
-    id: "couponluxury",
-    category: "Coupon site",
-    title: "Coupon Luxury",
-    src: "/assets/projects-screenshots/couponluxury/landing.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png", "5.png"],
-    live: "https://www.couponluxury.com/",
+    id: "kingdomland",
+    category: "Kingdomland",
+    title: "KingdomLand",
+    src: "/assets/projects-screenshots/kingdomland/kingdomland1.jpg",
+    screenshots: [
+      "kingdomland1.jpg",
+      "kingdomland2.jpg",
+      "kingdomland3.jpg",
+      "kingdomland4.jpg",
+    ],
+    live: "https://kingdomland.vn/",
     skills: {
       frontend: [
         PROJECT_SKILLS.js,
@@ -363,67 +337,18 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            CouponLuxury is your go-to destination for snagging the best deals
-            without lifting a finger. Whether you&apos;re hunting for the latest
-            discounts or trying to save a buck at your favorite stores,
-            CouponLuxury&apos;s got you covered.
+            Kingdomland is an online learning platform focused on Catholic video content, delivering a modern, accessible, and user-friendly learning experience.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <p className="font-mono mb-2 mt-4">
-            As soon as you land, boom! You&apos;re greeted with the freshest
-            coupons and top-tier deals that&apos;ll make your wallet happy.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/couponluxury/landing.png`]} />
-          <TypographyH3 className="my-4 ">Stores</TypographyH3>
-          <p className="font-mono mb-2">
-            Dive into a comprehensive list of stores, each packed with exclusive
-            deals and discounts. It&apos;s like having a VIP pass to every sale
-            in town.
-          </p>
+          <TypographyH3 className="my-4 mt-8">Website Screens</TypographyH3>
           <SlideShow
             images={[
-              `${BASE_PATH}/couponluxury/stores.png`,
-              `${BASE_PATH}/couponluxury/store.png`,
+              `${BASE_PATH}/kingdomland/kingdomland1.jpg`,
+              `${BASE_PATH}/kingdomland/kingdomland2.jpg`,
+              `${BASE_PATH}/kingdomland/kingdomland3.jpg`,
+              `${BASE_PATH}/kingdomland/kingdomland4.jpg`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Categories</TypographyH3>
-
-          <p className="font-mono mb-2">
-            Whatever you&apos;re into—fashion, tech, food—you&apos;ll find it
-            neatly organized here. No more endless scrolling; just pick a
-            category and get the best offers instantly.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/couponluxury/categories.png`]} />
-          <TypographyH3 className="my-4 mt-8">Custom CMS </TypographyH3>
-          <p className="font-mono mb-2">
-            Powered by Vue.js, this bad boy allows us to keep the content
-            dynamic and up-to-date. From flash sales to limited-time offers, my
-            CMS ensures everything&apos;s live and relevant.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/couponluxury/cms-1.png`,
-              `${BASE_PATH}/couponluxury/cms-2.png`,
-            ]}
-          />
-          <p className="font-mono mb-2 mt-5">
-            Plus, I&apos;ve sprinkled in some extra magic like personalized
-            deal recommendations, user-friendly search features, and a sleek,
-            responsive design that works like a charm on any device.
-          </p>
-          <p className="font-mono mb-2">
-            CouponLuxury isn&apos;t just a website; it&apos;s your personal deal-hunting
-            assistant, ensuring you never miss out on a bargain!
-          </p>
-          {/* <TypographyP className="my-4 mt-8">
-          <strong>Misc:</strong>
-          Hosted not one, not two, but THREE coding contests (Codemacha) during
-          college. Safe to say, Coding Ducks passed the vibe check.
-        </TypographyP>
-        <TypographyP className="my-4 mt-8">
-          <strong>Target Audience:</strong>
-          For all the novice coders out there ready to make their mark.
-        </TypographyP> */}
         </div>
       );
     },
@@ -521,7 +446,6 @@ const projects: Project[] = [
             Welcome to my digital playground, where creativity meets code in the
             dopest way possible.
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
           <TypographyH3 className="my-4 mt-8">
             Beautiful 3D Objects{" "}
           </TypographyH3>
@@ -567,7 +491,6 @@ const projects: Project[] = [
     src: "/assets/projects-screenshots/ghostchat/1.png",
     screenshots: ["1.png", "2.png", "3.png", "4.png"],
     live: "https://ghostchat.vercel.app",
-    github:"https://github.com/Naresh-Khatri/GhostChat",
     skills: {
       frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.chakra],
       backend: [PROJECT_SKILLS.supabase],
@@ -576,14 +499,16 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            Ghostchat is your go-to spot for sending anonymous messages without
-            leaving a trace. Powered by Supabase, it&apos;s all about keeping things
-            low-key and secure. Whether you&apos;re sharing secrets, giving feedback,
-            or just having some fun, Ghostchat ensures your identity stays
-            hidden, while your voice is heard. Say what you want, without the
-            worry.
+            <span className="block">
+              Ghostchat is your go-to spot for sending anonymous messages without
+              leaving a trace. Powered by Supabase, it&apos;s all about keeping things
+              low-key and secure.
+            </span>
+            <span className="block">
+              Whether you&apos;re sharing secrets, giving feedback, or just having fun,
+              your identity stays hidden while your voice is heard.
+            </span>
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
             images={[
               `${BASE_PATH}/ghostchat/1.png`,
@@ -598,8 +523,8 @@ const projects: Project[] = [
   },
   {
     id: "jra",
-    category: "Result analyzer",
-    title: "JNTUA Results Analyzer",
+    category: "IT Warehouse",
+    title: "IT Warehouse",
     src: "/assets/projects-screenshots/jra/1.png",
     screenshots: ["1.png"],
     live: "https://naresh-khatri.github.io/JNTUA-result-analyser-spa/#/",
@@ -616,81 +541,28 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            JNTUA Results Analyzer was a revolutionary tool designed to simplify
-            and enhance the experience of accessing academic results. It served
-            as a powerful proxy between the JNTUA university results website and
-            its users, offering a range of features that made result analysis
-            faster and more efficient. Here&apos;s what made it stand out:
+            The IT Asset Management System was designed to streamline and optimize the management of IT equipment within the organization. It serves as a centralized platform for tracking, managing, and monitoring all technology assets, improving efficiency and reducing manual workload.
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow images={[`${BASE_PATH}/jra/1.png`]} />
           <TypographyH3 className="my-4 mt-8">
-            Effortless Results Retrieval
+             System Overview
           </TypographyH3>
           {/* Effortless Results Retrieval: */}
           <ul className="list-disc ml-6">
             <li className="font-mono">
-              Search all your results using a single roll number, eliminating
-              the tedious task of sifting through thousands of rows on the
-              official site.
+              Manage all IT equipment such as computers, devices, and accessories in one place, eliminating manual tracking and scattered records.
             </li>
           </ul>
-          <TypographyH3 className="my-4 mt-8">Class-Wise Results:</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Inventory Tracking</TypographyH3>
           <ul className="list-disc ml-6">
             <li className="font-mono">
-              class-wise results effortlessly by entering a roll number range.
-              No more manual searches or filtering.
+             Track asset status, quantity, and usage in real-time, ensuring accurate and up-to-date inventory information.
             </li>
           </ul>
-          <TypographyH3 className="my-4 mt-8">Faculty Features:</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Search & Filtering</TypographyH3>
           <ul className="list-disc ml-6">
             <li className="font-mono">
-              Faculty members could download batch results in Excel format,
-              making administrative tasks a breeze.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">
-            Enhanced Data Insights:
-          </TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Each result came with additional features including:
-              <ul className="list-disc font-mono ml-6">
-                <li>
-                  <strong>CGPA Calculations: </strong>Easily track your
-                  cumulative grade point average.
-                </li>
-                <li>
-                  <strong>Charts:</strong> Visualize your academic performance
-                  with comprehensive charts.
-                </li>
-                <li>
-                  <strong>Future Projections:</strong> Get insights into
-                  potential future outcomes based on current performance.
-                </li>
-                <li>
-                  <strong> Backlog Counts: </strong>Keep track of your backlog
-                  subjects at a glance.
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Performance:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              The application was significantly faster and more efficient than
-              the official site, providing a smoother user experience.
-            </li>
-          </ul>
-          <TypographyH3 className="my-4 mt-8">Downfall:</TypographyH3>
-          <ul className="list-disc ml-6">
-            <li className="font-mono">
-              Unfortunately, as of May 2022, the tool stopped working due to the
-              introduction of CAPTCHA on the official JNTUA results site, which
-              disrupted the seamless functionality of the app. JNTUA Results
-              Analyzer transformed the way students and faculty interacted with
-              academic results, making it a must-have tool until its unexpected
-              shutdown.
+              Quickly find assets using search and filtering features, reducing the time spent on manual lookup.
             </li>
           </ul>
         </div>
