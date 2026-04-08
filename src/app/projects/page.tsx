@@ -26,16 +26,10 @@ creativity soar.`,
   },
   {
     id: 2,
-    name: "Ghost Chat",
-    description: `GhostChat is an anonymous messaging app that allows users to connect without revealing their identities. 
-Join the community for intriguing conversations and mysterious encounters.`,
-    link: "https://ghostchatt.vercel.app/",
-    images: [
-      "/assets/projects-screenshots/ghostchat/1.png",
-      "/assets/projects-screenshots/ghostchat/2.png",
-      "/assets/projects-screenshots/ghostchat/3.png",
-      "/assets/projects-screenshots/ghostchat/4.png",
-    ],
+    name: "Personal Manager",
+    description: `Your Personal Manager is your all-in-one space to organize your life, stay productive, and build better habits.`,
+    link: "https://ghostchat.vercel.app/",
+    images: ["/assets/projects-screenshots/ghostchat/1.jpg"],
   },
   {
     id: 3,

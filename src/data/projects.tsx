@@ -486,13 +486,13 @@ const projects: Project[] = [
   },
   {
     id: "ghostchat",
-    category: "Anonymous chat",
-    title: "GhostChat",
-    src: "/assets/projects-screenshots/ghostchat/1.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png"],
+    category: "Productivity",
+    title: "Personal Manager",
+    src: "/assets/projects-screenshots/ghostchat/1.jpg",
+    screenshots: ["1.jpg"],
     live: "https://ghostchat.vercel.app",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.chakra],
+      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.react],
       backend: [PROJECT_SKILLS.supabase],
     },
     get content() {
@@ -500,23 +500,23 @@ const projects: Project[] = [
         <div>
           <TypographyP className="font-mono ">
             <span className="block">
-              Ghostchat is your go-to spot for sending anonymous messages without
-              leaving a trace. Powered by Supabase, it&apos;s all about keeping things
-              low-key and secure.
+              Your Personal Manager is your all-in-one space to organize your life,
+              stay productive, and build better habits. Designed with simplicity in
+              mind, the app helps you manage daily tasks, set goals, and keep track
+              of your progress without feeling overwhelmed.
             </span>
-            <span className="block">
-              Whether you&apos;re sharing secrets, giving feedback, or just having fun,
-              your identity stays hidden while your voice is heard.
+            <span className="block mt-2">
+              Whether you&apos;re planning your day, tracking habits, or staying
+              consistent with your routines, everything is streamlined into a clean
+              and intuitive experience. Smart reminders and clear insights keep you
+              focused, motivated, and in control.
+            </span>
+            <span className="block mt-2">
+              From small daily tasks to long-term goals, Your Personal Manager helps
+              you stay organized, disciplined, and moving forward every day.
             </span>
           </TypographyP>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/ghostchat/1.png`,
-              `${BASE_PATH}/ghostchat/2.png`,
-              `${BASE_PATH}/ghostchat/3.png`,
-              `${BASE_PATH}/ghostchat/4.png`,
-            ]}
-          />
+          <SlideShow images={[`${BASE_PATH}/ghostchat/1.jpg`]} />
         </div>
       );
     },
