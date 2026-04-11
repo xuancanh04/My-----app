@@ -24,6 +24,12 @@ export enum SkillNames {
   AWS = "aws",
   VIM = "vim",
   VERCEL = "vercel",
+  CURSOR = "cursor",
+  CLAUDE = "claude",
+  CHATGPT = "chatgpt",
+  GITHUBCOPILOT = "githubcopilot",
+  GEMINI = "gemini",
+  PERPLEXITY = "perplexity",
 }
 export type Skill = {
   id: number;
@@ -232,6 +238,60 @@ using use = useUsing("use")`,
       "The triangle compony, helps you deploy and go touch grass! 🚀🌿",
     color: "#6cc24a",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+  },
+  [SkillNames.CURSOR]: {
+    id: 25,
+    name: "cursor",
+    label: "Cursor",
+    shortDescription:
+      "AI-native editor: refactor, explain, and ship without leaving the flow. ⚡🤖",
+    color: "#f7f7f7",
+    icon: "https://cdn.simpleicons.org/cursor",
+  },
+  [SkillNames.CLAUDE]: {
+    id: 26,
+    name: "claude",
+    label: "Claude",
+    shortDescription:
+      "Anthropic’s model for long context, careful reasoning, and solid code help. 🧠",
+    color: "#d4a574",
+    icon: "https://cdn.simpleicons.org/anthropic",
+  },
+  [SkillNames.CHATGPT]: {
+    id: 27,
+    name: "chatgpt",
+    label: "ChatGPT",
+    shortDescription:
+      "Quick answers, snippets, and rubber-ducking when Stack Overflow is asleep. 💬",
+    color: "#74aa9c",
+    icon: "https://cdn.jsdelivr.net/npm/simple-icons@14.0.0/icons/openai.svg",
+  },
+  [SkillNames.GITHUBCOPILOT]: {
+    id: 28,
+    name: "githubcopilot",
+    label: "GitHub Copilot",
+    shortDescription:
+      "Inline completions in the IDE—tab to accept, pray it compiles. ⌨️✨",
+    color: "#6e5494",
+    icon: "https://cdn.simpleicons.org/githubcopilot",
+  },
+  [SkillNames.GEMINI]: {
+    id: 29,
+    name: "gemini",
+    label: "Gemini",
+    shortDescription:
+      "Google’s multimodal model—brainstorm, draft, and debug with extra context. ✨",
+    color: "#4285f4",
+    icon: "https://cdn.simpleicons.org/googlegemini",
+  },
+  [SkillNames.PERPLEXITY]: {
+    id: 30,
+    name: "perplexity",
+    label: "Perplexity",
+    shortDescription:
+      "AI search with citations—fact-check before you paste into prod. 🔎",
+    color: "#20b8cd",
+    icon: "https://cdn.simpleicons.org/perplexity",
   },
 };
 
