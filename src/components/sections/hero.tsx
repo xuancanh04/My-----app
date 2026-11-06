@@ -18,37 +18,36 @@ const HeroSection = () => {
   const { isLoading } = usePreloader();
 
   return (
-    <section id="hero" className={cn("relative w-full h-screen")}>
-      <div className="grid md:grid-cols-2">
+    <section id="hero" className={cn("relative w-full min-h-[100dvh] flex flex-col justify-center items-center")}>
+      <div className="grid md:grid-cols-2 w-full max-w-7xl mx-auto">
         <div
           className={cn(
-            "h-[calc(100dvh-3rem)] md:h-[calc(100dvh-4rem)] z-[2]",
+            "min-h-[calc(100dvh-4rem)] z-[2] w-full",
             "col-span-1",
-            "flex flex-col justify-start md:justify-center items-center md:items-start",
-            "pt-28 sm:pt-0 sm:pb-32 md:p-24 lg:p-40 xl:p-48"
+            "flex flex-col justify-center items-center md:items-start text-center md:text-left",
+            "px-6 pt-24 pb-16 sm:px-8 sm:py-16 md:p-16 lg:p-24"
           )}
         >
           {!isLoading && (
             <>
-              <div className="">
-                <BlurIn delay={0.7}>
+              <div className="w-full flex flex-col items-center md:items-start">
+                <BlurIn delay={0.7} className="w-full flex justify-center md:justify-start">
                   <p
                     className={cn(
-                      "md:self-start mt-4 font-thin text-md text-slate-500 dark:text-zinc-400 ml-3",
-                      "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
+                      "font-thin text-sm sm:text-base md:text-lg text-slate-500 dark:text-zinc-400 mb-1",
+                      "cursor-default font-display bg-clip-text text-center md:text-left"
                     )}
                   >
                     Hi, I am
-                    <br className="md:hidden" />
                   </p>
                 </BlurIn>
-                <BlurIn delay={1}>
+                <BlurIn delay={1} className="w-full flex justify-center md:justify-start">
                   <Tooltip delayDuration={300}>
                     <TooltipTrigger asChild>
                       <h1
                         className={cn(
-                          "font-thin text-5xl text-transparent text-slate-800 ml-1 text-left",
-                          "cursor-default text-edge-outline font-display sm:text-6xl md:text-7xl whitespace-nowrap"
+                          "font-thin text-4xl sm:text-6xl md:text-7xl text-transparent text-slate-800",
+                          "cursor-default text-edge-outline font-display tracking-tight text-center md:text-left"
                         )}
                       >
                         {config.author}
@@ -62,12 +61,11 @@ const HeroSection = () => {
                     </TooltipContent>
                   </Tooltip>
                 </BlurIn>
-                {/* <div className="md:block hidden bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 w-screen h-px animate-fade-right animate-glow" /> */}
-                <BlurIn delay={1.2}>
+                <BlurIn delay={1.2} className="w-full flex justify-center md:justify-start">
                   <p
                     className={cn(
-                      "md:self-start md:mt-4 font-thin text-md text-slate-500 dark:text-zinc-400 ml-3",
-                      "cursor-default font-display sm:text-lg md:text-xl leading-relaxed bg-clip-text "
+                      "mt-4 font-thin text-sm sm:text-base md:text-lg text-slate-500 dark:text-zinc-400",
+                      "cursor-default font-display leading-relaxed bg-clip-text max-w-md text-center md:text-left"
                     )}
                   >
                     <span className="block">
@@ -76,36 +74,36 @@ const HeroSection = () => {
                   </p>
                 </BlurIn>
               </div>
-              <div className="mt-8 md:ml-2 flex flex-col gap-3">
-                <Link
-                  href={
-                    "https://drive.google.com/file/d/1D0NDqi1VXSvflmq7ggdgfWMkcqnG1MMX/view?usp=sharing"
-                  }
-                  target="_blank"
-                  className="flex-1"
-                >
-                  <BoxReveal delay={2} width="100%" >
-                    <Button className="flex items-center gap-2 w-full">
-                      <File size={24} />
-                      <p>Resume</p>
-                    </Button>
-                  </BoxReveal>
-                </Link>
-                <div className="md:self-start flex gap-3">
+              <div className="mt-8 flex flex-col items-center md:items-start gap-4 w-full">
+                <div className="w-full max-w-xs flex justify-center md:justify-start">
+                  <Link
+                    href="https://drive.google.com/file/d/1R4bZiUZ6z-WdWSEEDQsOnrNjT3nzpv58/view?usp=sharing"
+                    target="_blank"
+                    className="w-full"
+                  >
+                    <BoxReveal delay={2} width="100%">
+                      <Button className="flex items-center justify-center gap-2 w-full py-5 text-base">
+                        <File size={20} />
+                        <p>Resume</p>
+                      </Button>
+                    </BoxReveal>
+                  </Link>
+                </div>
+                <div className="flex gap-4 justify-center md:justify-start">
                   <Link
                     href={config.social.github}
                     target="_blank"
                   >
-                    <Button variant={"outline"}>
-                      <SiGithub size={24} />
+                    <Button variant={"outline"} size="icon" className="h-11 w-11">
+                      <SiGithub size={22} />
                     </Button>
                   </Link>
                   <Link
                     href={config.social.linkedin}
                     target="_blank"
                   >
-                    <Button variant={"outline"}>
-                      <SiLinkedin size={24} />
+                    <Button variant={"outline"} size="icon" className="h-11 w-11">
+                      <SiLinkedin size={22} />
                     </Button>
                   </Link>
                 </div>
@@ -113,9 +111,9 @@ const HeroSection = () => {
             </>
           )}
         </div>
-        <div className="grid col-span-1"></div>
+        <div className="hidden md:grid col-span-1"></div>
       </div>
-      <div className="absolute bottom-10 left-[50%] translate-x-[-50%]">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 pointer-events-none">
         <ScrollDownIcon />
       </div>
     </section>
