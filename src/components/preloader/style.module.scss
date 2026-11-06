@@ -4,11 +4,10 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding-inline: 60px;
-  padding-bottom: 30px;
+  padding-inline: 24px;
+  padding-bottom: 24px;
   position: fixed;
   z-index: 99;
-  // TODO: Add a better color instead of just the background to make it pop more
   background-color: hsl(var(--background));
   svg {
     position: absolute;
@@ -22,9 +21,16 @@
   p {
     display: flex;
     color: hsl(var(--foreground));
-    font-size: 72px;
+    font-size: clamp(36px, 12vw, 72px);
     align-items: center;
     position: absolute;
     z-index: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .introduction {
+    padding-inline: 60px;
+    padding-bottom: 30px;
   }
 }

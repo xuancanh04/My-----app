@@ -8,8 +8,8 @@ const SkillsSection = () => {
   const skills = Object.values(SKILLS).sort((a, b) => a.id - b.id);
 
   return (
-    <section id="skills" className="w-full min-h-screen md:min-h-[150dvh]">
-      <div className="top-[70px] sticky mb-12">
+    <section id="skills" className="w-full py-16">
+      <div className="top-[70px] sticky mb-8 md:mb-12 z-10">
         <Link href={"#skills"}>
           <BoxReveal width="100%">
             <h2
@@ -24,7 +24,7 @@ const SkillsSection = () => {
           </BoxReveal>
         </Link>
       </div>
-      <div className="mx-auto grid max-w-6xl gap-4 px-4 pb-16 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 px-4 pb-16">
         {skills.map((skill) => (
           <div
             key={skill.id}
